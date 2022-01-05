@@ -161,7 +161,7 @@ class lagrange_hydro_1d:
         self.uslope = 0         # Slope for powerlaw itype
         self.ut0    = 1e4       # initial temperature
         self.hse    = self.NOHSE  # Default type of HSE solution
-        self.hpath  = '/Users/jade8030/code/heger_progenitors/'   # Path to Heger files
+        self.hpath  = 'heger_progenitors/'   # Path to Heger files
         self.htype  = 'solar'   # Heger file type
         self.hname  = 's25.0'    # Heger file name
         self.hnavg  = 10        # Number of points to average within each zone
