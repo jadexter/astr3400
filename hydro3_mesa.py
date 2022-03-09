@@ -323,6 +323,9 @@ class lagrange_hydro_1d:
                     self.r_outer = 
                     print('r inner: ',self.r_inner)
 
+                    # calculate the zone indices which are between the inner and outer radii
+                    indx = np.arange(len(m.data['radius']))[(m.data['radius']*7e10 > self.r_inner)&(m.data['radius']*7e10 < self.r_outer)]
+
                     # TODO EDIT assign the data for r, P, rho, v between the inner and outer radii in cgs units
                     # again caution with units and note that the m.data variables go from outside in!
                     rvals =
