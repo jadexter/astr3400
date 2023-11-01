@@ -136,7 +136,7 @@ class lagrange_hydro_1d:
     POWERLAW=0
     HEGER=1
     # TODO EDIT HERE define a MESA variable with some value
-    
+
     
 # Boundary condition parameters:
     PISTON=0
@@ -166,7 +166,7 @@ class lagrange_hydro_1d:
         self.hse    = self.NOHSE  # Default type of HSE solution
         self.hpath  = 'heger_progenitors/'   # Path to Heger files
         # TODO EDIT add MESA variables self.mpath, self.mname that default to blank strings (var = '')
-        
+
         
         self.htype  = 'solar'   # Heger file type
         self.hname  = 's25.0'    # Heger file name
@@ -334,7 +334,7 @@ class lagrange_hydro_1d:
                     vvals = 
 
                 # set inner mass to mass coordinate of r_inner:
-                self.mass_r_inner=m.data['mass'][-1]*pc.m_sun
+                self.mass_r_inner=m.data['mass'][s4[-1]]*pc.m_sun
 
             # remove outer zone if density drops suddenly:
             # no need to change these lines
