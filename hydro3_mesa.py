@@ -214,7 +214,8 @@ class lagrange_hydro_1d:
         self.mass_r_inner = 0   # Mass inside of inner boundary
         self.bctype = [self.PISTON,self.OUTFLOW]
         self.vscale = 1
-        self.noplot = 0
+        self.no_plot = 0
+        self.no_output = 0
         self.checkint = 1000
         ########################################
 
@@ -676,7 +677,7 @@ class lagrange_hydro_1d:
     #--------------------------------
 
             tot_mass,tot_ke,tot_eint,tot_egrav,tot_e=self.calc_global_quantities()
-            if (self.it % 100 == 0): 
+            if (self.it % 100 == 0 and self.no_output == 0): 
                 print("%6d %8.3e %8.3e" % (self.it,self.t,self.dt))
                 print("%8.3e %8.3e %8.3e %8.3e %8.3e %8.3e" % (self.mass_r_inner,tot_mass,tot_ke,tot_eint,tot_egrav,tot_e))
 
